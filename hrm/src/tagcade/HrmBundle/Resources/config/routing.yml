@@ -1,3 +1,7 @@
 tagcade_hrm_homepage:
     path:     /hello/{name}
     defaults: { _controller: tagcadeHrmBundle:Default:index }
+api_get_token:
+    path:      /getToken
+    defaults:  { _controller: tagcadeHrmBundle:Login:getToken }
+    methods:  [POST]

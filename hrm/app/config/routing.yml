@@ -1,4 +1,6 @@
 tagcade_hrm:
     resource: "@tagcadeHrmBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /api/v1
+
+
 

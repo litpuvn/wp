@@ -7,6 +7,24 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-
         default:
             anonymous: ~
+        gettoken:
+            pattern:    ^/api/v1/getToken$
+            stateless:  true
+            gfreeau_get_jwt:
+                username_parameter: username
+                password_parameter: password
+                post_only:          true
+                success_handler:    lexik_jwt_authentication.handler.authentication_success
+                throw_exceptions:   true
+        say_hello:
+            pattern:    ^/api/v1/hello/{name}
+            security: false
+        api:
+            pattern:    ^/api/
+            stateless:  true
+            lexik_jwt:
+                throw_exceptions:   true
+                create_entry_point: false
+
