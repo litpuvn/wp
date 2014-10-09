@@ -1,0 +1,3 @@
+tagcade_hrm_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: tagcadeHrmBundle:Default:index }
